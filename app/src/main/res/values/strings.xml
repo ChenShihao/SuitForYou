@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">Suit For You</string>
+    <string name="login_str">登录</string>
+    <string name="welcome_logo">SUIT\nFOR YOU</string>
+    <string name="username">用户名</string>
+    <string name="password">密码</string>
+
+    <string name="navigation_drawer_open">打开</string>
+    <string name="navigation_drawer_close">关闭</string>
+    <string name="main_menu_cart">购物车</string>
+    <string name="loginOrReg">登录 / 注册</string>
+    <string name="birthday_dafault">请填写生日</string>
+    <string name="phone_default">请填写手机</string>
+    <string name="desc_default">请填写个人剁手宣言</string>
+    <string name="name_default">请填写真实姓名</string>
+    <string name="nickname_default">请填写昵称</string>
+    <string name="sex_default">请选择性别</string>
+    <string name="email_default">请填写电子邮箱</string>
+
+    <string name="shopping_cart">购物车</string>
+    <string name="main_menu_search">搜索商品</string>
+
+    <string name="item_image">LIST_ITEM_IMAGE</string>
+    <string name="mark_item">收藏该商品</string>
+    <string name="title_activity_pay">支付</string>
+    <string name="title_activity_comment">评论</string>
+</resources>

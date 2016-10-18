@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="hasData"
+            type="com.cufe.suitforyou.customclass.MyBoolean" />
+    </data>
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical"
+        tools:context="com.cufe.suitforyou.activity.SearchActivity">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/toolbar_size"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/bg_radius"
+            android:elevation="2dp"
+            android:orientation="horizontal">
+
+            <!-- 返回按钮 -->
+            <ImageView
+                android:id="@+id/search_back_iv"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:padding="12dp"
+                android:src="@drawable/ic_back"
+                android:tint="@color/colorNormalGray" />
+
+            <com.cufe.suitforyou.customview.ClearableEditText
+                android:id="@+id/search_edit_text"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="6"
+                android:background="#fff"
+                android:gravity="center_vertical"
+                android:hint="搜索商品"
+                android:imeOptions="actionSearch"
+                android:paddingStart="13dp"
+                android:singleLine="true"
+                android:textAppearance="?attr/textAppearanceSearchResultTitle"
+                android:textColor="@color/colorNormalGray"
+                android:textColorHint="@color/colorNormalGray" />
+
+            <!-- 搜索按钮 -->
+            <ImageView
+                android:id="@+id/search_submit_btn"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:padding="12dp"
+                android:src="@drawable/ic_search"
+                android:tint="@color/colorNormalGray" />
+
+            <!-- 图片按钮 -->
+            <ImageView
+                android:id="@+id/search_photo_btn"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:onClick="searchPhoto"
+                android:padding="12dp"
+                android:src="@drawable/ic_crop"
+                android:tint="@color/colorNormalGray" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/search_result_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="64dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <android.support.v4.widget.SwipeRefreshLayout
+                android:id="@+id/search_swipe_refresh"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/search_result_rv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </android.support.v4.widget.SwipeRefreshLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/search_tips"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="12dp"
+                android:src="@drawable/ic_mood_bad"
+                android:tint="@color/colorNormalGray" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Umm....找不到商品..."
+                android:textColor="@color/colorNormalGray" />
+        </LinearLayout>
+
+    </android.support.design.widget.CoordinatorLayout>
+</layout>

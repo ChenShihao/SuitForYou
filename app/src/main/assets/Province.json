@@ -1,0 +1,172 @@
+[
+  {
+    "PROVINCE": "北京",
+    "PROVINCE_ID": "110000",
+    "ID": "1"
+  },
+  {
+    "PROVINCE": "天津",
+    "PROVINCE_ID": "120000",
+    "ID": "2"
+  },
+  {
+    "PROVINCE": "河北",
+    "PROVINCE_ID": "130000",
+    "ID": "3"
+  },
+  {
+    "PROVINCE": "山西",
+    "PROVINCE_ID": "140000",
+    "ID": "4"
+  },
+  {
+    "PROVINCE": "内蒙古",
+    "PROVINCE_ID": "150000",
+    "ID": "5"
+  },
+  {
+    "PROVINCE": "辽宁",
+    "PROVINCE_ID": "210000",
+    "ID": "6"
+  },
+  {
+    "PROVINCE": "吉林",
+    "PROVINCE_ID": "220000",
+    "ID": "7"
+  },
+  {
+    "PROVINCE": "黑龙江",
+    "PROVINCE_ID": "230000",
+    "ID": "8"
+  },
+  {
+    "PROVINCE": "上海",
+    "PROVINCE_ID": "310000",
+    "ID": "9"
+  },
+  {
+    "PROVINCE": "江苏",
+    "PROVINCE_ID": "320000",
+    "ID": "10"
+  },
+  {
+    "PROVINCE": "浙江",
+    "PROVINCE_ID": "330000",
+    "ID": "11"
+  },
+  {
+    "PROVINCE": "安徽",
+    "PROVINCE_ID": "340000",
+    "ID": "12"
+  },
+  {
+    "PROVINCE": "福建",
+    "PROVINCE_ID": "350000",
+    "ID": "13"
+  },
+  {
+    "PROVINCE": "江西",
+    "PROVINCE_ID": "360000",
+    "ID": "14"
+  },
+  {
+    "PROVINCE": "山东",
+    "PROVINCE_ID": "370000",
+    "ID": "15"
+  },
+  {
+    "PROVINCE": "河南",
+    "PROVINCE_ID": "410000",
+    "ID": "16"
+  },
+  {
+    "PROVINCE": "湖北",
+    "PROVINCE_ID": "420000",
+    "ID": "17"
+  },
+  {
+    "PROVINCE": "湖南",
+    "PROVINCE_ID": "430000",
+    "ID": "18"
+  },
+  {
+    "PROVINCE": "广东",
+    "PROVINCE_ID": "440000",
+    "ID": "19"
+  },
+  {
+    "PROVINCE": "广西",
+    "PROVINCE_ID": "450000",
+    "ID": "20"
+  },
+  {
+    "PROVINCE": "海南",
+    "PROVINCE_ID": "460000",
+    "ID": "21"
+  },
+  {
+    "PROVINCE": "重庆",
+    "PROVINCE_ID": "500000",
+    "ID": "22"
+  },
+  {
+    "PROVINCE": "四川",
+    "PROVINCE_ID": "510000",
+    "ID": "23"
+  },
+  {
+    "PROVINCE": "贵州",
+    "PROVINCE_ID": "520000",
+    "ID": "24"
+  },
+  {
+    "PROVINCE": "云南",
+    "PROVINCE_ID": "530000",
+    "ID": "25"
+  },
+  {
+    "PROVINCE": "西藏",
+    "PROVINCE_ID": "540000",
+    "ID": "26"
+  },
+  {
+    "PROVINCE": "陕西",
+    "PROVINCE_ID": "610000",
+    "ID": "27"
+  },
+  {
+    "PROVINCE": "甘肃",
+    "PROVINCE_ID": "620000",
+    "ID": "28"
+  },
+  {
+    "PROVINCE": "青海",
+    "PROVINCE_ID": "630000",
+    "ID": "29"
+  },
+  {
+    "PROVINCE": "宁夏",
+    "PROVINCE_ID": "640000",
+    "ID": "30"
+  },
+  {
+    "PROVINCE": "新疆",
+    "PROVINCE_ID": "650000",
+    "ID": "31"
+  },
+  {
+    "PROVINCE": "台湾",
+    "PROVINCE_ID": "710000",
+    "ID": "32"
+  },
+  {
+    "PROVINCE": "香港",
+    "PROVINCE_ID": "810000",
+    "ID": "33"
+  },
+  {
+    "PROVINCE": "澳门",
+    "PROVINCE_ID": "820000",
+    "ID": "34"
+  }
+]

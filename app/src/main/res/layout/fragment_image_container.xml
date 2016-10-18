@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="image"
+            type="com.cufe.suitforyou.customclass.MyImageTag" />
+    </data>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/app_bar_height"
+        android:onClick="onClick"
+        android:scaleType="centerCrop"
+        android:tag="@{image.tag}"
+        app:imageUrl="@{image.url}" />
+</layout>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_menu_user_info"
+            android:icon="@drawable/ic_account"
+            android:title="个人信息" />
+        <item
+            android:id="@+id/nav_menu_order"
+            android:icon="@drawable/ic_order"
+            android:title="我的订单" />
+        <item
+            android:id="@+id/nav_menu_recent"
+            android:icon="@drawable/ic_record"
+            android:title="最近浏览" />
+        <item
+            android:id="@+id/nav_menu_favour"
+            android:icon="@drawable/ic_star"
+            android:title="我的收藏" />
+        <item
+            android:id="@+id/nav_menu_coin"
+            android:icon="@drawable/ic_money"
+            android:title="领取钢镚" />
+    </group>
+
+    <item android:title="关于应用">
+        <menu>
+            <item
+                android:id="@+id/nav_menu_share"
+                android:icon="@drawable/ic_menu_share"
+                android:title="分享" />
+            <item
+                android:id="@+id/nav_menu_send"
+                android:icon="@drawable/ic_menu_send"
+                android:title="反馈" />
+
+        </menu>
+    </item>
+</menu>

@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="user"
+            type="com.cufe.suitforyou.model.User" />
+    </data>
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        tools:context="com.cufe.suitforyou.activity.UserInfoActivity">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/user_info_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/toolbar_size"
+            android:background="@android:color/transparent"
+            android:theme="@style/AppTheme.AppBarOverlay"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/app_bar_height"
+            android:background="@color/colorPrimary" />
+
+        <ScrollView
+            android:id="@+id/user_info_scroll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/app_bar_item_height">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="bottom"
+                        android:orientation="vertical">
+
+                        <com.cufe.suitforyou.customview.RoundImageView
+                            android:id="@+id/user_info_img"
+                            android:layout_width="@dimen/user_info_img_size"
+                            android:layout_height="@dimen/user_info_img_size"
+                            android:layout_gravity="center"
+                            android:layout_margin="12dp"
+                            android:onClick="onClick"
+                            android:scaleType="centerCrop"
+                            android:src="@{user.photo}"
+                            app:border_inside_color="@android:color/white"
+                            app:border_outside_color="@android:color/white"
+                            app:border_thickness="2dp" />
+
+                        <TextView
+                            android:id="@+id/user_info_nickName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:background="?attr/selectableItemBackground"
+                            android:clickable="true"
+                            android:lineSpacingExtra="3dp"
+                            android:onClick="onClick"
+                            android:padding="12dp"
+                            android:singleLine="true"
+                            android:text="@{user.nickname}"
+                            android:textColor="@color/textColorPrimary"
+                            android:textSize="28sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+                </FrameLayout>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/cardview_default_margin"
+                    android:background="@color/cardview_light_background"
+                    android:elevation="@dimen/cardview_default_elevation"
+                    android:padding="@dimen/cardview_default_padding"
+                    app:cardCornerRadius="@dimen/cardview_default_elevation">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/icon_default_size"
+                            android:gravity="end"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:gravity="center_vertical|end"
+                                android:lineSpacingExtra="3dp"
+                                android:text="长按列表内容可进行编辑" />
+
+                            <ImageView
+                                android:layout_width="@dimen/icon_small_size"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="@dimen/icon_small_margin"
+                                android:layout_marginRight="@dimen/icon_small_margin"
+                                android:src="@drawable/ic_pencil"
+                                android:tint="@color/colorNormalGray" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginLeft="@dimen/icon_small_margin"
+                            android:layout_marginRight="@dimen/icon_small_margin"
+                            android:background="@color/colorNormalGray" />
+
+                        <!-- 用户姓名 -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="@dimen/icon_default_size"
+                                android:layout_height="@dimen/icon_default_size"
+                                android:layout_gravity="center_vertical"
+                                android:padding="@dimen/icon_default_padding"
+                                android:src="@drawable/ic_face"
+                                android:tint="@color/colorPrimary" />
+
+                            <TextView
+                                android:id="@+id/user_info_name"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="?attr/selectableItemBackground"
+                                android:clickable="true"
+                                android:gravity="center_vertical"
+                                android:lineSpacingExtra="3dp"
+                                android:padding="@dimen/icon_default_padding"
+                                android:text="@{user.name}" />
+
+                        </LinearLayout>
+
+                        <!-- 用户签名 -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="@dimen/icon_default_size"
+                                android:layout_height="@dimen/icon_default_size"
+                                android:padding="@dimen/icon_default_padding"
+                                android:src="@drawable/ic_note"
+                                android:tint="@color/colorPrimary" />
+
+                            <TextView
+                                android:id="@+id/user_info_desc"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="?attr/selectableItemBackground"
+                                android:clickable="true"
+                                android:gravity="center_vertical"
+                                android:lineSpacingExtra="3dp"
+                                android:minHeight="@dimen/icon_default_size"
+                                android:padding="@dimen/icon_default_padding"
+                                android:text="@{user.userDesc}" />
+
+                        </LinearLayout>
+
+                        <!-- 用户手机 -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="@dimen/icon_default_size"
+                                android:layout_height="@dimen/icon_default_size"
+                                android:layout_gravity="center_vertical"
+                                android:padding="@dimen/icon_default_padding"
+                                android:src="@drawable/ic_phone"
+                                android:tint="@color/colorPrimary" />
+
+                            <TextView
+                                android:id="@+id/user_info_phone"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="?attr/selectableItemBackground"
+                                android:clickable="true"
+                                android:gravity="center_vertical"
+                                android:lineSpacingExtra="3dp"
+                                android:padding="@dimen/icon_default_padding"
+                                android:text="@{user.phone}" />
+
+                        </LinearLayout>
+
+                        <!-- 用户生日 -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="@dimen/icon_default_size"
+                                android:layout_height="@dimen/icon_default_size"
+                                android:layout_gravity="center_vertical"
+                                android:padding="@dimen/icon_default_padding"
+                                android:src="@drawable/ic_gift"
+                                android:tint="@color/colorPrimary" />
+
+                            <TextView
+                                android:id="@+id/user_info_birthday"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="?attr/selectableItemBackground"
+                                android:clickable="true"
+                                android:gravity="center_vertical"
+                                android:lineSpacingExtra="3dp"
+                                android:padding="@dimen/icon_default_padding"
+                                android:text="@{user.birthday}" />
+
+                        </LinearLayout>
+
+                        <!-- 用户性别 -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="@dimen/icon_default_size"
+                                android:layout_height="@dimen/icon_default_size"
+                                android:layout_gravity="center_vertical"
+                                android:padding="@dimen/icon_default_padding"
+                                android:src="@drawable/ic_wc"
+                                android:tint="@color/colorPrimary" />
+
+                            <TextView
+                                android:id="@+id/user_info_sex"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="?attr/selectableItemBackground"
+                                android:clickable="true"
+                                android:gravity="center_vertical"
+                                android:lineSpacingExtra="3dp"
+                                android:padding="@dimen/icon_default_padding"
+                                android:text="@{user.sex}" />
+
+                        </LinearLayout>
+
+                        <!-- 用户邮箱 -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="@dimen/icon_default_size"
+                                android:layout_height="@dimen/icon_default_size"
+                                android:layout_gravity="center_vertical"
+                                android:padding="@dimen/icon_default_padding"
+                                android:src="@drawable/ic_email"
+                                android:tint="@color/colorPrimary" />
+
+                            <TextView
+                                android:id="@+id/user_info_email"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="?attr/selectableItemBackground"
+                                android:clickable="true"
+                                android:gravity="center_vertical"
+                                android:lineSpacingExtra="3dp"
+                                android:padding="@dimen/icon_default_padding"
+                                android:text="@{user.email}" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+
+            </LinearLayout>
+        </ScrollView>
+
+    </android.support.design.widget.CoordinatorLayout>
+</layout>

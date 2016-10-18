@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="orderItem"
+            type="com.cufe.suitforyou.model.CartItem" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackground"
+        android:clickable="true"
+        android:onClick="onClick"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        android:tag="@{orderItem.clothesId}">
+
+        <ImageView
+            android:id="@+id/order_list_image"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:scaleType="centerCrop"
+            android:transitionName="@string/item_image"
+            app:imageUrl="@{orderItem.photo}" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingStart="8dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top|start"
+                android:layout_weight="2"
+                android:lines="2"
+                android:text="@{orderItem.title}"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:lines="1"
+                android:text="@{orderItem.sku.toString()}"
+                android:textColor="@color/colorNormalGray" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:lines="1"
+                    android:text='@{"$"+String.valueOf(orderItem.price)+" * "+String.valueOf(orderItem.number)}'
+                    android:textColor="@color/colorNormalGray" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:paddingEnd="12dp"
+                    android:text="小计" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:lines="1"
+                    android:text='@{"$ "+String.valueOf(orderItem.price*orderItem.number)}'
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="@color/colorPriceRed"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

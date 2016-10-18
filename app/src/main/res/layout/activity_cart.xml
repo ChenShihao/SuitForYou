@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        tools:context="com.cufe.suitforyou.activity.CartActivity">
+
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:theme="@style/AppTheme.AppBarOverlay">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/cart_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/colorPrimary"
+                android:theme="@style/AppTheme.AppBarOverlay"
+                app:popupTheme="@style/AppTheme.PopupOverlay.Dark" />
+        </android.support.design.widget.AppBarLayout>
+
+        <LinearLayout
+            android:id="@+id/cart_tips"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:visibility="gone"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_mood_good"
+                android:layout_margin="12dp"
+                android:tint="@color/colorNormalGray" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorNormalGray"
+                android:text="购物车空空如也，快去剁把手" />
+        </LinearLayout>
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/cart_swipe_refresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/cart_rv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/cart_fab"
+            android:layout_width="@dimen/fab_icon_default_size"
+            android:layout_height="@dimen/fab_icon_default_size"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="8dp"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:onClick="GoToOrder"
+            android:src="@drawable/ic_payment"
+            android:tint="@android:color/white" />
+    </android.support.design.widget.CoordinatorLayout>
+</layout>

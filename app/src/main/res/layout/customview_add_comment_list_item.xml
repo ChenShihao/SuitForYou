@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="addCommentCartItem"
+            type="com.cufe.suitforyou.model.CartItem" />
+
+        <variable
+            name="addCommentItemPosition"
+            type="Integer" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="96dp"
+                android:layout_height="96dp"
+                android:scaleType="centerCrop"
+                app:imageUrl="@{addCommentCartItem.photo}" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:lines="1"
+                    android:text="@{addCommentCartItem.title}"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:lines="1"
+                    android:text="@{addCommentCartItem.sku.toString()}"
+                    android:textColor="@color/colorNormalGray"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="商品评分"
+                    android:textSize="16sp" />
+
+                <RatingBar
+                    android:id="@+id/add_comment_list_item_rating_star"
+                    style="?android:attr/ratingBarStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:isIndicator="false"
+                    android:max="5"
+                    android:numStars="5"
+                    android:onClick="editScore"
+                    android:rating="5"
+                    android:stepSize="0.5"
+                    android:tag="@{addCommentItemPosition}" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:padding="16dp"
+                android:text="商品评价"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/add_comment_list_item_comment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:background="@color/colorWeakGray"
+                android:gravity="top"
+                android:hint="请说出你的故事"
+                android:inputType="textMultiLine"
+                android:minLines="5"
+                android:onClick="editComment"
+                android:padding="8dp"
+                android:tag="@{addCommentItemPosition}"
+                android:text="系统默认好评"
+                android:textColorHint="@color/colorNormalGray" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

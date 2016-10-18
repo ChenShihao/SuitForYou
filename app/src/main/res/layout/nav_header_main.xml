@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="user"
+            type="com.cufe.suitforyou.model.User" />
+    </data>
+
+    <LinearLayout
+        android:id="@+id/nav_header_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimaryDark"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingEnd="@dimen/activity_horizontal_margin"
+        android:paddingStart="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+        <com.cufe.suitforyou.customview.RoundImageView
+            android:id="@+id/nav_header_userImg"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_marginTop="36dp"
+            android:scaleType="centerCrop"
+            android:src="@{user.photo}"
+            android:tint="#ffffff" />
+
+        <TextView
+            android:id="@+id/nav_header_userNickname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/nav_header_spacing"
+            android:paddingTop="@dimen/nav_header_spacing"
+            android:text="@{user.nickname}"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/nav_header_userDesc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:lineSpacingExtra="2dp"
+            android:maxLines="5"
+            android:text="@{user.userDesc}" />
+
+    </LinearLayout>
+</layout>

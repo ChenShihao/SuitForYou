@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/tablerow_default_padding"
+        android:paddingTop="@dimen/tablerow_default_padding">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="选择数量"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_weight="1" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/number_picker_drop"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:gravity="center"
+                android:paddingEnd="12dp"
+                android:paddingStart="12dp"
+                android:text="-"
+                android:textColor="@android:color/holo_red_light"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/number_pick_tv"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:paddingEnd="12dp"
+                android:paddingStart="12dp"
+                android:textColor="@color/colorIconTint"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/number_pick_add"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:gravity="center"
+                android:paddingEnd="12dp"
+                android:paddingStart="12dp"
+                android:text="+"
+                android:textColor="@android:color/holo_green_light"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:orientation="horizontal"
+        android:padding="@dimen/tablerow_default_padding">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="总共$ "
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/colorPriceRed"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/number_pick_total_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/colorPriceRed"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</LinearLayout>

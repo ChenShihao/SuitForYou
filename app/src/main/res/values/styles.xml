@@ -1,0 +1,33 @@
+<resources>
+
+    <!-- App默认使用主题 -->
+    <style name="AppTheme" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowContentTransitions">true</item>
+        <item name="android:windowAllowEnterTransitionOverlap">true</item>
+        <item name="android:windowAllowReturnTransitionOverlap">true</item>
+    </style>
+
+    <style name="AppTheme.NotTranslucent" parent="AppTheme">
+        <item name="android:windowTranslucentStatus">false</item>
+        <item name="android:windowTranslucentNavigation">false</item>
+        <item name="android:statusBarColor">@color/colorPrimaryDark</item>
+        <item name="android:navigationBarColor">@color/colorPrimaryDark</item>
+    </style>
+    <!-- ActionBar 使用深底白字主题 -->
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <!-- ActionBar 使用白底深字主题 -->
+    <style name="AppTheme.AppBarOverlay.Dark" parent="ThemeOverlay.AppCompat.ActionBar">
+        <item name="android:textColorPrimary">#bdbdbd</item>
+        <item name="android:colorControlNormal">#bdbdbd</item>
+    </style>
+    <!-- ActionBar 弹出菜单使用白底深字主题 -->
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+    <!-- ActionBar 弹出菜单使用白底深字主题 -->
+    <style name="AppTheme.PopupOverlay.Dark" parent="ThemeOverlay.AppCompat.Dark" />
+</resources>
